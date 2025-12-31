@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Only For You</title>
+
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background: #fff5f7;
+      text-align: center;
+      padding: 50px 20px;
+      color: #4a1f1f;
+    }
+
+    .box {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .soft {
+      font-style: italic;
+      color: #7a3a3a;
+    }
+
+    /* Slider */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 520px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 2.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      padding: 12px 15px;
+      background: rgba(255, 245, 247, 0.75);
+      border-radius: 12px;
+      font-style: italic;
+      color: #5a2a2a;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 2s ease, transform 2s ease;
+    }
+
+    .slide.active .caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+
+  <!-- 🔹 MAIN MESSAGE (EDIT LATER) -->
+  <p>
+    👉 WRITE YOUR MAIN MESSAGE HERE<br><br>
+    👉 YOU CAN ADD LINE BREAKS USING &lt;br&gt;<br><br>
+    👉 THIS TEXT WILL APPEAR ABOVE THE PHOTOS
+  </p>
+
+  <p class="soft">
+    👉 OPTIONAL SMALL LINE (LIKE A SIGNATURE)
+  </p>
+
+  <!-- 🌸 IMAGE SLIDER -->
+  <div class="slider">
+
+    <!-- IMAGE 1 -->
+    <div class="slide active">
+      <img src="photos/pic1.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 1</div>
+    </div>
+
+    <!-- IMAGE 2 -->
+    <div class="slide">
+      <img src="photos/pic2.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 2</div>
+    </div>
+
+    <!-- IMAGE 3 -->
+    <div class="slide">
+      <img src="photos/pic3.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 3</div>
+    </div>
+
+    <!-- IMAGE 4 -->
+    <div class="slide">
+      <img src="photos/pic4.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 4</div>
+    </div>
+
+    <!-- IMAGE 5 -->
+    <div class="slide">
+      <img src="photos/pic5.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 5</div>
+    </div>
+    
+    <!-- IMAGE 6 -->
+    <div class="slide">
+      <img src="photos/pic6.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 5</div>
+    </div>
+    
+    <!-- IMAGE 7 -->
+    <div class="slide">
+      <img src="photos/pic7.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 5</div>
+    </div>
+    
+    <!-- OPTIONAL IMAGE 6 -->
+    <!--
+    <div class="slide">
+      <img src="photos/pic6.jpg">
+      <div class="caption">👉 MESSAGE FOR IMAGE 6</div>
+    </div>
+    -->
+
+  </div>
+
+  <!-- 🔹 ENDING MESSAGE -->
+  <p class="soft">
+    👉 FINAL CLOSING LINE GOES HERE
+  </p>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }, 4500);
+</script>
+
+</body>
+</html>
