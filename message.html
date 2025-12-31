@@ -7,20 +7,26 @@
   <style>
     body {
       font-family: "Georgia", serif;
-      background: #fff5f7;
+      background: radial-gradient(circle at top, #2b1b2f, #120d14);
       text-align: center;
-      padding: 50px 20px;
-      color: #4a1f1f;
+      padding: 60px 20px;
+      color: #f6e9ef;
     }
 
     .box {
-      max-width: 650px;
+      max-width: 680px;
       margin: auto;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 40px 25px;
+      border-radius: 22px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px);
     }
 
     .soft {
       font-style: italic;
-      color: #7a3a3a;
+      color: #f0cfe1;
+      opacity: 0.9;
     }
 
     /* Slider */
@@ -29,10 +35,10 @@
       width: 100%;
       max-width: 420px;
       height: 520px;
-      margin: 40px auto;
+      margin: 45px auto;
       overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      border-radius: 22px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.6);
     }
 
     .slide {
@@ -40,7 +46,7 @@
       width: 100%;
       height: 100%;
       opacity: 0;
-      transition: opacity 2.5s ease-in-out;
+      transition: opacity 2.8s ease-in-out;
     }
 
     .slide.active {
@@ -56,16 +62,16 @@
     /* Caption */
     .caption {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      padding: 12px 15px;
-      background: rgba(255, 245, 247, 0.75);
-      border-radius: 12px;
+      bottom: 22px;
+      left: 18px;
+      right: 18px;
+      padding: 14px 16px;
+      background: rgba(20, 10, 20, 0.7);
+      border-radius: 14px;
       font-style: italic;
-      color: #5a2a2a;
+      color: #f7dbea;
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(12px);
       transition: opacity 2s ease, transform 2s ease;
     }
 
@@ -80,38 +86,37 @@
 <div class="box">
 
   <!-- MAIN MESSAGE -->
-<p>
-  Hey you… 💕<br><br>
+  <p>
+    Hey you… 💕<br><br>
 
-  When this year began,  
-  we were already us —  
-  but I didn’t know it would show me  
-  so many new sides of you.<br><br>
+    When this year began,  
+    we were already us —  
+    but I didn’t know it would show me  
+    so many new sides of you.<br><br>
 
-  This year brought its share of changes,  
-  and somewhere through all of them,  
-  I found myself falling for you  
-  a little more,  
-  again and again.<br><br>
+    This year brought its share of changes,  
+    and somewhere through all of them,  
+    I found myself falling for you  
+    a little more,  
+    again and again.<br><br>
 
-  Between ordinary days,  
-  familiar conversations,  
-  and moments that quietly stayed,  
-  you continued to be my constant.<br><br>
+    Between ordinary days,  
+    familiar conversations,  
+    and moments that quietly stayed,  
+    you continued to be my constant.<br><br>
 
-  This page is a small pause in time —  
-  a place to hold what this year has given me:  
-  more of you,  
-  and feelings I don’t always say out loud,  
-  but carry every day.<br><br>
-</p>
-
+    This page is a small pause in time —  
+    a place to hold what this year has given me:  
+    more of you,  
+    and feelings I don’t always say out loud,  
+    but carry every day.
+  </p>
 
   <p class="soft">
-  Take your time here.  
-  Every picture below  
-  is a chapter of our year,  
-  and a piece of my heart.
+    Take your time here.  
+    Every picture below  
+    is a chapter of our year,  
+    and a piece of my heart.
   </p>
 
   <!-- IMAGE SLIDER -->
@@ -159,7 +164,7 @@
 
     <div class="slide">
       <img src="photos/pic9.jpeg">
-      <div class="caption">And this special day.. what more to say</div>
+      <div class="caption">And this special day… what more to say</div>
     </div>
 
   </div>
@@ -178,7 +183,7 @@
     slides[current].classList.remove("active");
     current = (current + 1) % slides.length;
     slides[current].classList.add("active");
-  }, 4500);
+  }, 4800);
 </script>
 
 </body>
