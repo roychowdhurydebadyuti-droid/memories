@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret Question</title>
+
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background: radial-gradient(circle at top, #2b1b2f, #120d14);
+      color: #f6e9ef;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .decor {
+      letter-spacing: 6px;
+      margin: 20px 0 30px;
+      opacity: 0.9;
+    }
+
+    .question {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 18px;
+      border-radius: 12px;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hint {
+      background: rgba(120, 90, 140, 0.35);
+      padding: 14px;
+      border-radius: 12px;
+      font-style: italic;
+      margin-bottom: 25px;
+      color: #f3dff0;
+    }
+
+    input {
+      width: 80%;
+      max-width: 360px;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      text-align: center;
+      outline: none;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 32px;
+      border-radius: 25px;
+      border: none;
+      background: linear-gradient(to right, #e07aa7, #c86fc9);
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    #error {
+      margin-top: 15px;
+      color: #ffb6c1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>🔒 Secret Question</h1>
+
+  <div class="decor">
+    ✨ 🌙 ⭐ 💫 🌙 ⭐ ✨
+  </div>
+
+  <div class="question">
+    💖 <strong>Where did we first kiss?</strong> 💌
+  </div>
+
+  <div class="hint">
+    🌙 Hint: Think back to that quiet moment under the stars…
+  </div>
+
+  <input
+    type="text"
+    id="answer"
+    placeholder="Your answer…"
+  >
+
+  <br>
+  <button onclick="unlock()">Unlock what’s in my heart 💗</button>
+
+  <p id="error"></p>
+
+  <div class="footer">
+    Some moments stay forever,  
+    softly glowing in our hearts ✨
+  </div>
+
+  <div class="decor">
+    ✨ 🌙 ⭐ 💫 🌙 ⭐ ✨
+  </div>
+
+</div>
+
+<script>
+  function unlock() {
+    const userAnswer = document.getElementById("answer").value
+      .trim()
+      .toLowerCase();
+
+    const correctAnswer = "Off Beat"; // 🔑 CHANGE THIS
+
+    if (userAnswer === correctAnswer) {
+      window.location.href = "message.html";
+    } else {
+      document.getElementById("error").innerText =
+        "That doesn’t feel quite right… 💔";
+    }
+  }
+</script>
+
+</body>
+</html>
